@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\EF_Core_Demo.Models\EF_Core_Demo.Models.csproj" />
+    </ItemGroup>
+
 </Project>
