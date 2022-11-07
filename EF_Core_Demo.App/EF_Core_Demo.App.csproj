@@ -7,4 +7,16 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\EF_Core_Demo.EF_Lib\EF_Core_Demo.EF_Lib.csproj" />
+      <ProjectReference Include="..\EF_Core_Demo.Json_Lib\EF_Core_Demo.Json_Lib.csproj" />
+      <ProjectReference Include="..\EF_Core_Demo.Models\EF_Core_Demo.Models.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="db.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
