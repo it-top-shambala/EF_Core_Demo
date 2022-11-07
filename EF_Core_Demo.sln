@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_Demo.EF_Lib", "EF_C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_Demo.Models", "EF_Core_Demo.Models\EF_Core_Demo.Models.csproj", "{40EAE06D-AC73-46B4-9F83-F74D7032A35C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_Demo.Json_Lib", "EF_Core_Demo.Json_Lib\EF_Core_Demo.Json_Lib.csproj", "{23A06DB7-71D0-467A-BD85-7CFE2469419F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{40EAE06D-AC73-46B4-9F83-F74D7032A35C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40EAE06D-AC73-46B4-9F83-F74D7032A35C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40EAE06D-AC73-46B4-9F83-F74D7032A35C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23A06DB7-71D0-467A-BD85-7CFE2469419F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23A06DB7-71D0-467A-BD85-7CFE2469419F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23A06DB7-71D0-467A-BD85-7CFE2469419F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23A06DB7-71D0-467A-BD85-7CFE2469419F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
