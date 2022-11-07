@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_Demo.App", "EF_Core_Demo.App\EF_Core_Demo.App.csproj", "{B738B6BF-B6D1-4B5A-A5A9-06A1D3663182}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_Demo.EF_Lib", "EF_Core_Demo.EF_Lib\EF_Core_Demo.EF_Lib.csproj", "{5692ED5D-C0E6-4AD0-9FDF-68D15D411AF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_Demo.Models", "EF_Core_Demo.Models\EF_Core_Demo.Models.csproj", "{40EAE06D-AC73-46B4-9F83-F74D7032A35C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B738B6BF-B6D1-4B5A-A5A9-06A1D3663182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B738B6BF-B6D1-4B5A-A5A9-06A1D3663182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B738B6BF-B6D1-4B5A-A5A9-06A1D3663182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B738B6BF-B6D1-4B5A-A5A9-06A1D3663182}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5692ED5D-C0E6-4AD0-9FDF-68D15D411AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5692ED5D-C0E6-4AD0-9FDF-68D15D411AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5692ED5D-C0E6-4AD0-9FDF-68D15D411AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5692ED5D-C0E6-4AD0-9FDF-68D15D411AF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40EAE06D-AC73-46B4-9F83-F74D7032A35C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40EAE06D-AC73-46B4-9F83-F74D7032A35C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40EAE06D-AC73-46B4-9F83-F74D7032A35C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40EAE06D-AC73-46B4-9F83-F74D7032A35C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
