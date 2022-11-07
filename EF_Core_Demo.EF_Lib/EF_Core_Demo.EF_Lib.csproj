@@ -6,4 +6,18 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\EF_Core_Demo.Models\EF_Core_Demo.Models.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MySql.EntityFrameworkCore" Version="6.0.7" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="DbConfigLib">
+        <HintPath>DbConfigLib.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>
