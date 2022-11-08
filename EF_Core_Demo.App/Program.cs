@@ -1,7 +1,6 @@
 ﻿using EF_Core_Demo.EF_Lib;
 using EF_Core_Demo.EF_Lib.Models;
 using EF_Core_Demo.Json_Lib;
-using Microsoft.EntityFrameworkCore;
 using Student = EF_Core_Demo.EF_Lib.Models.Student;
 
 
@@ -39,15 +38,13 @@ foreach (var student in students)
         var _student = tableStudents.First(s => s.LastName == student.LastName && s.FirstName == student.FirstName && s.DateOfBirth == student.DateOfBirth);
         var _subject = tableSubjects.First(s => s.Name == subject);
 
-        foreach (var mark in marks)
-        {
-            tableStudentsRatings.Add(new StudentsRating
+        tableStudentsRatings
+            .AddRange(marks.Select(mark => new StudentsRating
             {
                 Student = _student,
                 Subject = _subject,
                 Mark = mark
-            });
-        }
+            }));
     }
 }
 
@@ -57,3 +54,34 @@ db.Students.AddRange(tableStudents);
 db.Subjects.AddRange(tableSubjects);
 db.StudentsRatings.AddRange(tableStudentsRatings);
 db.SaveChanges();
+
+var studentsTemp = new List<EF_Core_Demo.Models.Student>();
+
+foreach (var student in db.Students)
+{
+    var studentTemp = new EF_Core_Demo.Models.Student
+    {
+        Id = student.Id,
+        LastName = student.LastName,
+        FirstName = student.FirstName,
+        DateOfBirth = student.DateOfBirth,
+        Ratings = new Dictionary<string, List<int>>()
+    };
+
+    var temp = student.StudentsRatings
+        .DistinctBy(s => s.Subject)
+        .Select(s => s.Subject.Name)
+        .ToList();
+    foreach (var t in temp)
+    {
+        var marks = student.StudentsRatings
+            .Where(r => r.Subject.Name == t)
+            .Select(s => s.Mark)
+            .ToList();
+        studentTemp.Ratings.Add(t, marks);
+    }
+
+    studentsTemp.Add(studentTemp);
+}
+
+StudentJson.Export(studentsTemp, "student_export.json");
