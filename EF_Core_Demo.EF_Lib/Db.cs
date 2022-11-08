@@ -14,7 +14,7 @@ public class Db : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseMySQL(DbConfig.ImportFromJson().ToString());
+        optionsBuilder.UseMySql(DbConfig.ImportFromJson().ToString(), new MySqlServerVersion(new Version(8, 0, 30)));
     }
 
     public void CreateDb()
